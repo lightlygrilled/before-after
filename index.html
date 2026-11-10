@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before / after showcase demo</title>
+    <link rel="stylesheet" href="before-after.css" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f4f4f5;
+      }
+
+      .demo-wrap {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      .demo-wrap h1 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #27272a;
+        margin: 0 0 1rem;
+      }
+
+      .demo-wrap p {
+        font-size: 0.9375rem;
+        color: #52525b;
+        margin: 0 0 1.5rem;
+        line-height: 1.5;
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="demo-wrap">
+      <h1>Before / after showcase</h1>
+      <p>
+        Drag the handle or click anywhere on the image. Drag right to reveal more
+        of the before photo. Use arrow keys when the handle is focused.
+      </p>
+
+      <div data-showcase="box">
+        <div data-showcase="after">
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=800&fit=crop"
+            alt="After renovation"
+            width="1200"
+            height="800"
+          />
+        </div>
+        <div data-showcase="before">
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop"
+            alt="Before renovation"
+            width="1200"
+            height="800"
+          />
+        </div>
+        <button type="button" data-showcase="slider" aria-label="Compare before and after"></button>
+      </div>
+    </div>
+
+    <script defer src="before-after.js"></script>
+  </body>
+</html>
